@@ -12,6 +12,8 @@ psql -U user
 INSERT INTO customer(id, name, email, age)
 VALUES (nextval('customer_id_sequence'), 'Jalex', 'Rosa', 12);
 
+** Structure Architect Rest API
+
 ** Annotation
 @Scope("prototype"): tạo object mới khác địa chỉ
 @Scope("singleton"): lấy cùng địa chỉ object đã tồn tại
@@ -20,3 +22,11 @@ VALUES (nextval('customer_id_sequence'), 'Jalex', 'Rosa', 12);
 
 @Primary: đặt là ưu tiên khi có 2 bean cần inject
 @Qualifier: chọn bean nào là ưu tiên cho @Autowired
+
+** 3 player architect
+
+* Presentation : @Controller
+* Business Logic : @Service
+* Data Access : @Repository
+
+@PathVariable
